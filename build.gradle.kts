@@ -29,6 +29,8 @@ dependencies {
 
     implementation("io.springfox:springfox-boot-starter:3.0.0")
 
+    runtimeOnly("org.postgresql:postgresql")
+
     compileOnly("org.projectlombok:lombok")
 
     annotationProcessor("org.projectlombok:lombok")

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+    postgres:
+        container_name: postgres
+        image: 'postgres:latest'
+        networks:
+            cv_network:
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_DB: cv
+            POSTGRES_USER: cv_admin
+            POSTGRES_PASSWORD: cv_password
+        volumes:
+            - "cv_pg:/var/lib/postgresql/data"
+networks:
+    cv_network:
+
+volumes:
+    cv_pg:
